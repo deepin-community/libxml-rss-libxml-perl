@@ -1,22 +1,35 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: XML-RSS-LibXML
+Upstream-Contact: Daisuke Maki <dmaki@cpan.org>
+Source: https://metacpan.org/release/XML-RSS-LibXML
+Files-Excluded: t/data/merlyn1.rss t/data/rss-permalink.xml t/data/2.0/sf-hs-with-lastBuildDate.rss t/data/2.0/sf-hs-with-pubDate.rss t/1.0-parse-2.t t/1.0-to-2.0.t t/2.0-permalink.t
+Comment: The non-free test material and dependent tests have been removed from the upstream tarball for the +dfsg version.
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
+Copyright: 2005-2007, 2014, Daisuke Maki <dmaki@cpan.org>
+ 2005-2007, 2014, Tatsuhiko Miyagawa <miyagawa@bulknews.net>
+License: Artistic or GPL-1+
+
+Files: debian/*
+Copyright:
+ 2009-2015, gregor herrmann <gregoa@debian.org>
+ 2009, Damyan Ivanov <dmn@debian.org>
+ 2010-2011, Nicholas Bamber <nicholas@periapt.co.uk>
+ 2014, Florian Schlichting <fsfs@debian.org>
+License: Artistic or GPL-1+
+
+License: Artistic
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the Artistic License, which comes with Perl.
+ .
+ On Debian systems, the complete text of the Artistic License
+ can be found in `/usr/share/common-licenses/Artistic'.
+
+License: GPL-1+
+ This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+ the Free Software Foundation; either version 1, or (at your option)
+ any later version.
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
- .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ On Debian systems, the complete text of version 1 of the
+ General Public License can be found in `/usr/share/common-licenses/GPL-1'.
