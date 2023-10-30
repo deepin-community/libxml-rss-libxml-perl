@@ -1,15 +1,42 @@
-Source: template-repository
-Section: unknown
+Source: libxml-rss-libxml-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Damyan Ivanov <dmn@debian.org>,
+           gregor herrmann <gregoa@debian.org>,
+           Florian Schlichting <fsfs@debian.org>
+Section: perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13), libmodule-build-perl
+Build-Depends-Indep: perl,
+                     libclass-accessor-perl,
+                     libdatetime-format-mail-perl,
+                     libdatetime-format-w3cdtf-perl,
+                     libtest-differences-perl,
+                     libtest-exception-perl,
+                     libtest-warn-perl,
+                     libuniversal-require-perl,
+                     libxml-libxml-perl
+Standards-Version: 3.9.6
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libxml-rss-libxml-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libxml-rss-libxml-perl.git
+Homepage: https://metacpan.org/release/XML-RSS-LibXML
+Testsuite: autopkgtest-pkg-perl
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libxml-rss-libxml-perl
+Architecture: all
+Depends: ${perl:Depends},
+         ${misc:Depends},
+         libclass-accessor-perl,
+         libdatetime-format-mail-perl,
+         libdatetime-format-w3cdtf-perl,
+         libuniversal-require-perl,
+         libxml-libxml-perl
+Description: module for creating, parsing, updating RSS files with XML::LibXML
+ XML::RSS::LibXML uses XML::LibXML (libxml2) for parsing RSS instead of
+ XML::RSS' XML::Parser (expat), while trying to keep interface compatibility
+ with XML::RSS.
+ .
+ XML::RSS is an extremely handy tool, but it is unfortunately not exactly
+ the most lean or efficient RSS parser, especially in a long-running process.
+ .
+ Use this module when you have severe performance requirements working with RSS
+ files.

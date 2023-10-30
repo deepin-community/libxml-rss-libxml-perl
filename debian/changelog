@@ -1,5 +1,156 @@
-template-repository (1.0-1) unstable; urgency=medium
+libxml-rss-libxml-perl (0.3105+dfsg-3) unstable; urgency=medium
 
-  * Initial release
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * debian/upstream/metadata: use HTTPS for GitHub URLs.
+
+  [ intrigeri ]
+  * Switch repackaging framework to Files-Excluded method.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends: Drop versioned constraint on libmodule-build-perl.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 28 Jun 2022 23:17:11 +0100
+
+libxml-rss-libxml-perl (0.3105+dfsg-2.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 01:43:46 +0100
+
+libxml-rss-libxml-perl (0.3105+dfsg-2) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * debian/control: update Module::Build dependency.
+  * Add debian/upstream/metadata
+  * Declare compliance with Debian Policy 3.9.6.
+  * Mark package as autopkgtest-able.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 29 May 2015 18:15:29 +0200
+
+libxml-rss-libxml-perl (0.3105+dfsg-1) unstable; urgency=medium
+
+  [ Florian Schlichting ]
+  * Import Upstream version 0.3104+dfsg
+  * Drop delete_makefile.patch, applied upstream in record speed
+
+  [ gregor herrmann ]
+  * New upstream release 0.3105+dfsg.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 16 May 2014 18:37:05 +0200
+
+libxml-rss-libxml-perl (0.3103+dfsg-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * Update debian/repack.stub.
+  * debian/control: remove Nicholas Bamber from Uploaders on request of
+    the MIA team.
+  * Strip trailing slash from metacpan URLs.
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ Florian Schlichting ]
+  * Import Upstream version 0.3103+dfsg
+  * Bump years of upstream copyright
+  * Delete copyright paragraph for inc/* (dropped upstream)
+  * Bump dh compatibility to level 8 (no changes necessary)
+  * Added build-dependency on M::B 0.38
+  * Drop lintian override for outdated copyright-format
+  * Declare compliance with Debian Policy 3.9.5
+  * Add myself to uploaders and copyright
+
+ -- Florian Schlichting <fsfs@debian.org>  Fri, 07 Mar 2014 21:24:49 +0100
+
+libxml-rss-libxml-perl (0.3102+dfsg-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+  [ Nicholas Bamber ]
+  * New upstream version
+  * Added lintian override concerning copyright format
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Sat, 24 Sep 2011 15:20:09 +0100
+
+libxml-rss-libxml-perl (0.3101+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+  * Raised standards version to 3.9.2
+  * Updated copyright
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Fri, 08 Jul 2011 12:39:43 +0100
+
+libxml-rss-libxml-perl (0.3100+dfsg-1) unstable; urgency=low
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Changed: Replace versioned (build-)dependency on
+    perl (>= 5.6.0-{12,16}) with an unversioned dependency on perl (as
+    permitted by Debian Policy 3.8.3).
+
+  [ Ansgar Burchardt ]
+  * New upstream release 0.3005.
+
+  [ gregor herrmann ]
+  * New upstream release 0.3100.
+  * Minimize debian/rules.
+  * debian/rules: require debhelper 7.2.13 (Module::AutoInstall).
+  * Convert to source format 3.0 (quilt).
+  * debian/copyright: refresh formatting (DEP5).
+  * Set Standards-Version to 3.8.4 (no changes).
+  * debian/control: remove duplicate dependencies.
+
+  [ Nicholas Bamber ]
+  * Added myself to Uploaders
+  * Repacked to remove non dfsg material
+  * Improved short description
+  * Upped standards version to 3.9.1
+  * Removed versioned dependency on libxml-libxml-perl
+  * Adding patch to stop overwriting source
+  * Refreshed copyright
+
+ -- Nicholas Bamber <nicholas@periapt.co.uk>  Sun, 24 Oct 2010 23:25:42 +0100
+
+libxml-rss-libxml-perl (0.3004-1) unstable; urgency=low
+
+  * New upstream release:
+    Removes the test data with missing licenses and adjusts the tests, so we
+    can drop both the repacking framework and the quilt framework (cf. CPAN
+    RT #42536).
+  * Add /me to Uploaders.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 01 Feb 2009 15:37:55 +0100
+
+libxml-rss-libxml-perl (0.3003+dfsg.1-1) unstable; urgency=low
+
+  * Initial Release. Closes: #509094 -- ITP
+
+ -- Damyan Ivanov <dmn@debian.org>  Mon, 19 Jan 2009 23:53:57 +0200
